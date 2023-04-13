@@ -1,0 +1,350 @@
+<?php 
+         include"connect.php";
+            $query = "SELECT NAME, PRICE, IMAGE FROM PRODUCT WHERE STATUS='Available'";
+              $stid=oci_parse($conn, $query);
+              if(oci_execute($stid)){
+              while($row = oci_fetch_assoc($stid)){
+        echo'<div class="owl-carousel1 owl-theme1">
+          <a href="butcher.html" target="_blank">
+            <div class="item-item-bottom" id="s1">';
+               echo'<img src='.$row['IMAGE'].' alt="image" class="mid-img-shop">';
+                 echo'<h3 class="mid-info">'.$row['NAME'].'</h3>';
+              echo'<h4>£'.$row['PRICE'].'</h4>';
+            echo'</div>
+              
+          </a>
+          
+        </div>';
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="butcher.html" target="_blank">
+            <div class="item-item-bottom" id="s1">
+              <img src="Logos/product-01.png" alt="image" class="mid-img-shop">
+              <h3 class="mid-info">PRODUCT NAME</h3>
+              <h4>Rs.0.00</h4>
+            </div>
+          </a>
+          <a href="butcher.html" target="_blank">
+            <div class="item-item-bottom" id="s1">
+              <img src="Logos/product-01.png" alt="image" class="mid-img-shop">
+              <h3 class="mid-info">PRODUCT NAME</h3>
+              <h4>Rs.0.00</h4>
+            </div>
+          </a>
+          <a href="butcher.html" target="_blank">
+            <div class="item-item-bottom" id="s1">
+              <img src="Logos/product-01.png" alt="image" class="mid-img-shop">
+              <h3 class="mid-info">PRODUCT NAME</h3>
+              <h4>Rs.0.00</h4>
+            </div>
+          </a>
+          <a href="butcher.html" target="_blank">
+            <div class="item-item-bottom" id="s1">
+              <img src="Logos/product-01.png" alt="image" class="mid-img-shop">
+              <h3 class="mid-info">PRODUCT NAME</h3>
+              <h4>Rs.0.00</h4>
+            </div>
+          </a>
+          <a href="butcher.html" target="_blank">
+            <div class="item-item-bottom" id="s1">
+              <img src="Logos/product-01.png" alt="image" class="mid-img-shop">
+              <h3 class="mid-info">PRODUCT NAME</h3>
+              <h4>Rs.0.00</h4>
+            </div>
+          </a>
+          <a href="butcher.html" target="_blank">
+            <div class="item-item-bottom" id="s1">
+              <img src="Logos/product-01.png" alt="image" class="mid-img-shop">
+              <h3 class="mid-info">PRODUCT NAME</h3>
+              <h4>Rs.0.00</h4>
+            </div>
+          </a>
+          <a href="butcher.html" target="_blank">
+            <div class="item-item-bottom" id="s1">
+              <img src="Logos/product-01.png" alt="image" class="mid-img-shop">
+              <h3 class="mid-info">PRODUCT NAME</h3>
+              <h4>Rs.0.00</h4>
+            </div>
+          </a>
+          <a href="butcher.html" target="_blank">
+            <div class="item-item-bottom" id="s1">
+              <img src="Logos/product-01.png" alt="image" class="mid-img-shop">
+              <h3 class="mid-info">PRODUCT NAME</h3>
+              <h4>Rs.0.00</h4>
+            </div>
+          </a>
+          <a href="butcher.html" target="_blank">
+            <div class="item-item-bottom" id="s1">
+              <img src="Logos/product-01.png" alt="image" class="mid-img-shop">
+              <h3 class="mid-info">PRODUCT NAME</h3>
+              <h4>Rs.0.00</h4>
+            </div>
+          </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="mid-color1">
+        <div class="owl-carousel owl-theme">
+          <?php 
+         include"connect.php";
+            $query = "SELECT NAME, PRICE, IMAGE FROM PRODUCT WHERE STATUS='Available'";
+              $stid=oci_parse($conn, $query);
+              oci_execute($stid);?>
+
+           <a href="butcher.html" target="_blank">
+            <div class="item-item-bottom" id="s1">
+              <img src="Logos/product-01.png" alt="image" class="mid-img-shop">
+              <h3 class="mid-info">PRODUCT NAME</h3>
+              <h4>Rs.0.00</h4>
+            </div>
+          </a>
+          <a href="butcher.html" target="_blank">
+            <div class="item-item-bottom" id="s1">
+              <img src="Logos/product-01.png" alt="image" class="mid-img-shop">
+              <h3 class="mid-info">PRODUCT NAME</h3>
+              <h4>Rs.0.00</h4>
+            </div>
+          </a>
+          <a href="butcher.html" target="_blank">
+            <div class="item-item-bottom" id="s1">
+              <img src="Logos/product-01.png" alt="image" class="mid-img-shop">
+              <h3 class="mid-info">PRODUCT NAME</h3>
+              <h4>Rs.0.00</h4>
+            </div>
+          </a>
+          <a href="butcher.html" target="_blank">
+            <div class="item-item-bottom" id="s1">
+              <img src="Logos/product-01.png" alt="image" class="mid-img-shop">
+              <h3 class="mid-info">PRODUCT NAME</h3>
+              <h4>Rs.0.00</h4>
+            </div>
+          </a>
+          <a href="butcher.html" target="_blank">
+            <div class="item-item-bottom" id="s1">
+              <img src="Logos/product-01.png" alt="image" class="mid-img-shop">
+              <h3 class="mid-info">PRODUCT NAME</h3>
+              <h4>Rs.0.00</h4>
+            </div>
+          </a>
+          <a href="butcher.html" target="_blank">
+            <div class="item-item-bottom" id="s1">
+              <img src="Logos/product-01.png" alt="image" class="mid-img-shop">
+              <h3 class="mid-info">PRODUCT NAME</h3>
+              <h4>Rs.0.00</h4>
+            </div>
+          </a>
+          <a href="butcher.html" target="_blank">
+            <div class="item-item-bottom" id="s1">
+              <img src="Logos/product-01.png" alt="image" class="mid-img-shop">
+              <h3 class="mid-info">PRODUCT NAME</h3>
+              <h4>Rs.0.00</h4>
+            </div>
+          </a>
+          <a href="butcher.html" target="_blank">
+            <div class="item-item-bottom" id="s1">
+              <img src="Logos/product-01.png" alt="image" class="mid-img-shop">
+              <h3 class="mid-info">PRODUCT NAME</h3>
+              <h4>Rs.0.00</h4>
+            </div>
+          </a>
+          <a href="butcher.html" target="_blank">
+            <div class="item-item-bottom" id="s1">
+              <img src="Logos/product-01.png" alt="image" class="mid-img-shop">
+              <h3 class="mid-info">PRODUCT NAME</h3>
+              <h4>Rs.0.00</h4>
+            </div>
+          </a>
+       </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// slider
+
+const slider = document.querySelector(".slider");
+const nextBtn = document.querySelector(".next-btn");
+const prevBtn = document.querySelector(".prev-btn");
+const slides = document.querySelectorAll(".slide");
+const slideIcons = document.querySelectorAll(".slide-icon");
+const numberOfSlides = slides.length;
+var slideNumber = 0;
+
+//image slider next button
+nextBtn.addEventListener("click", () => {
+  slides.forEach((slide) => {
+    slide.classList.remove("active");
+  });
+  slideIcons.forEach((slideIcon) => {
+    slideIcon.classList.remove("active");
+  });
+
+  slideNumber++;
+
+  if(slideNumber > (numberOfSlides - 1)){
+    slideNumber = 0;
+  }
+
+  slides[slideNumber].classList.add("active");
+  slideIcons[slideNumber].classList.add("active");
+});
+
+//image slider previous button
+prevBtn.addEventListener("click", () => {
+  slides.forEach((slide) => {
+    slide.classList.remove("active");
+  });
+  slideIcons.forEach((slideIcon) => {
+    slideIcon.classList.remove("active");
+  });
+
+  slideNumber--;
+
+  if(slideNumber < 0){
+    slideNumber = numberOfSlides - 1;
+  }
+
+  slides[slideNumber].classList.add("active");
+  slideIcons[slideNumber].classList.add("active");
+});
+
+//image slider autoplay
+var playSlider;
+
+var repeater = () => {
+  playSlider = setInterval(function(){
+    slides.forEach((slide) => {
+      slide.classList.remove("active");
+    });
+    slideIcons.forEach((slideIcon) => {
+      slideIcon.classList.remove("active");
+    });
+
+    slideNumber++;
+
+    if(slideNumber > (numberOfSlides - 1)){
+      slideNumber = 0;
+    }
+
+    slides[slideNumber].classList.add("active");
+    slideIcons[slideNumber].classList.add("active");
+  }, 6000);
+}
+repeater();
+
+//stop the image slider autoplay on mouseover
+slider.addEventListener("mouseover", () => {
+  clearInterval(playSlider);
+});
+
+//start the image slider autoplay again on mouseout
+slider.addEventListener("mouseout", () => {
+  repeater();
+});
+
+
+
+
+let userBox = document.querySelector('.modal-box');
+
+document.querySelector('#user-btn').onclick = () =>{
+  userBox.classList.toggle('active');
+}

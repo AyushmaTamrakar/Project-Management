@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  /*background-color: #fff7f4;*/
+  background: #ebebeb;
+  overflow-x: hidden;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 16px;
+}
+
+
+
+
+  .container-fluid{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+
+  .main-content {
+    width: 65%;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+    margin: 5em auto;
+    display: flex;
+    min-width: 600px;
+  }
+
+  .company__info {
+    background-color: forestgreen;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    width: 45%;
+  }
+  .fa-android {
+    font-size: 3em;
+  }
+  .row > h2 {
+    color: forestgreen;
+    text-align: center;
+  }
+  .login_form {
+    background-color: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    width: 55%;
+    padding: 20px;
+  }
+  form {
+    padding: 0 2em;
+  }
+  .form__input {
+    width: 100%;
+    border: 0px solid transparent;
+    border-radius: 0;
+    border: 1px solid forestgreen;
+    padding: 1em 0.5em 0.5em;
+    padding-left: 2em;
+    outline: none;
+    margin: 1.5em auto;
+    transition: all 0.5s ease;
+  }
+  .form__input:focus {
+    border-bottom-color: #008080;
+    box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+    border-radius: 4px;
+  }
+  .btn {
+    transition: all 0.5s ease;
+    width: 30%;
+    border-radius: 30px;
+    color: forestgreen;
+    font-weight: 600;
+    background-color: #fff;
+    border: 1px solid forestgreen;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    height: 30px;
+}
+  .btn:hover,
+  .btn:focus {
+    background-color: forestgreen;
+    color: #fff;
+  }
+
+.bottom{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+}
+
+.login_type{
+    width: 100%;
+    margin-bottom: 15px;
+
+}
+
+#login-btn{
+      display: flex;
+    justify-content: center;
+}
+
+.acc_img{
+  width: 80%;
+  margin: 0 auto;
+}
+img{
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 1px solid white;
+}
+
+ @media (max-width: 750px){
+
+  body{
+    width: 100%;
+
+  }
+  .container-fluid{
+    padding: 50px 0px 50px 0px;
+  }
+  .main-content{
+    max-width: 400px;
+    flex-direction: column;
+    /* max-width: 450px; */
+    margin: 0 auto;
+    min-width: 400px;
+    background-color: gray;
+    overflow: hidden;
+    border-radius: 10px;
+
+  }
+  .company__info{
+    width: 100%;
+    border-radius: 0;
+    height: 200px;
+  }
+  .login_form{
+    width: 100%;
+    border-radius: 0;
+  }
+
+ }
+

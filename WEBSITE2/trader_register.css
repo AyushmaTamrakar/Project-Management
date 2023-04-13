@@ -1,0 +1,236 @@
+
+/* Register form starts here */
+#box {
+    /* z-index: 1; */
+    min-height: 100vh;
+    background-color: #fff;
+    width: calc(100% - 10px);
+    margin: 10px auto;
+  }
+  
+  .form-box {
+    /* background-color: blue; */
+    max-width: calc(100% - 400px);
+    min-height: 80vh;
+  
+    position: relative;
+    margin: auto;
+    top: 10vh;
+    border: 1px solid #000;
+    display: flex;
+    border-radius: 30px;
+    box-shadow: 2px 10px #888888;
+  
+    /* box-shadow: 0 0 100px 9px #000; */
+  }
+  
+  .register {
+    background-color: aqua;
+    width: 40vw;
+    height: 80vh;
+    border: none;
+    flex: 1.2;
+  
+  
+  }
+  
+  .image {
+    /* background-color: palevioletred; */
+    height: 80vh;
+    width: 40vw;
+    flex: 1;
+    border: none;
+    z-index: 1;
+  }
+  
+  .image img {
+    height: 50vh;
+    width: 20vw;
+    display: block;
+    position: relative;
+    top: 100px;
+    margin: auto;
+  }
+  
+  .button-box {
+    height: 5vh;
+    width: calc(100% - 50%);
+    margin: auto;
+    display: flex;
+    top: 20px;
+    justify-content: center;
+    justify-items: center;
+    /* box-shadow: 0 0 20px 9px #864879; */
+    position: relative;
+    background-color: #3f3351;
+    border-radius: 30px;
+  }
+  
+  .toggle-btn {
+    all: unset;
+    height: 100%;
+    flex: 1;
+    text-align: center;
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+    color: #000;
+    color: #fff;
+    background: transparent;
+    position: relative;
+  }
+  
+  #btn {
+    position: absolute;
+    /* background: blue; */
+    height: 5vh;
+    width: calc(100% - 50%);
+  
+    left: 0;
+    background: linear-gradient(to right, #df5ecb, #ed8d8d);
+    border-radius: 30px;
+    transition: 0.5s;
+  }
+  
+  .customer,
+  .trader {
+    /* height: calc(100% - 13%); */
+    height: auto;
+    width: calc(100% - 417px);
+    /* background-color: #df5ecb; */
+    position: absolute;
+    top: 70px;
+    left: 3px;
+    margin: auto;
+    /* margin-bottom: 0; */
+    padding: 0 1vw 0 0.2vw;
+    font-size: 1rem;
+  }
+  
+  #trader {
+    /* background-color: red; */
+    position: relative;
+    left: 100%;
+  
+  }
+  
+  #customer {
+    
+    position: relative;
+    z-index:  99;
+ 
+  
+  }
+  
+  .input-field {
+    all: unset;
+    height: 3.3vh;
+    /* height:4vh; */
+    width: calc(100% - 60%);
+    /* background-color: ; */
+    /* margin-bottom: 25px; */
+    margin-left: 15px;
+    padding: 2px 12px;
+    border-radius: 4px;
+    border: 0.1px solid #000;
+  
+  
+  }
+  
+  .full {
+    width: calc(100% - 10%);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1rem;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+  }
+  
+  .submit {
+    all: unset;
+    background-color: #1f1d36;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #fff;
+    border-radius: 30px;
+    left: 35%;
+    position: relative;
+    /* margin-bottom: 2px; */
+    /* top: 15px; */
+    /* margin-top: 3px; */
+  }
+  .dob{
+    margin-right: 12px;
+  }
+  .dob,
+  .gender,
+  .shopType {
+    position: relative;
+    left: 20px;
+  }
+  
+  .gender1,
+  .shopType1 {
+    position: relative;
+    left: 25px;
+    width: calc(100% - 65%);
+    height: 3.9vh;
+    background: none;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border: 1px solid #000;
+    padding-left: 3px;
+    border-radius: 3px;
+  }
+  
+  .link {
+    left: 30%;
+    position: relative;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+  }
+  
+  .link a {
+    all: unset;
+    font-size: 1rem;
+    color: blue;
+  }
+  
+  .policy1 {
+    position: relative;
+    left: 20px;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+    /* background-color: aqua; */
+   
+  }
+  
+  .error {
+    height: 3vh;
+  
+    color: red;
+    font-size: 1rem;
+    margin: 0 20px 5px 20px;
+  }
+  
+  .errorhalf {
+    height: 3vh;
+    width: 225px;
+    margin: 3px 0 3px 18px;
+  
+    top: -14px;
+    left: 50px;
+    color: red;
+  
+    font-size: 1rem;
+    float: left;
+  }
+  
+  /* register end */

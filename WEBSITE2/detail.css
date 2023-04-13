@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+.details{
+    width: calc(100% - 40%);
+    padding: 20px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.flex-box{
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+}
+.left{
+    flex: 1;
+}
+.right{
+    flex:1.2;
+}
+
+
+
+
+.big-img img{
+    width: 300px;
+    height: 200px;
+    border-radius: 3px;
+}
+
+
+.link{
+    font-size: 16px;
+    font-weight: 400;
+    color: forestgreen;
+}
+.box{
+    width: 400px;
+    border:  0px solid forestgreen;
+    height:  auto;
+}
+.slogan{
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 0px;
+}
+.stars i{
+    color: forestgreen;
+}
+.amount{
+    font-size: 20px;
+    font-weight: 800;
+    margin: 20px 0;
+}
+.size{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.like{
+    text-align:  center;
+    font-size: .8rem;
+}
+.info p{
+    font-size: 18px;
+    font-weight: 500;
+}
+.psize{
+    width: 60px;
+    height: 30px;
+    border: 1px solid #ff5e00;
+    color: #000;
+    text-align: center;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.psize.active{
+    border-width: 1.5px;
+    color: #ff5e00;
+    font-weight: 500;
+}
+.quantity{
+    display: flex;
+}
+.quantity p{
+    font-size: 18px;
+    font-weight: 500;
+}
+.quantity input{
+    width: 40px;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+    margin-left: 15px;
+}
+.btn-box{
+    display: flex;
+    margin-top: 40px;
+}
+.btn-box button{
+    font-size: 18px;
+    padding: 8px 25px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+}
+.cart-btn{
+    background-color: forestgreen;
+    margin-right: 20px;
+}
+.buy-btn{
+    background-color: forestgreen;
+}
+.cart-btn:hover{
+    background-color: lightgreen;
+}
+.buy-btn:hover{
+    background-color: lightgreen;
+    
+} 
+.send-rating{
+    background-color:forestgreen;
+    border:none;
+    color:white;
+    padding: 8px 30px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    letter-spacing: .2px;
+}
+
+.ok{
+    /* background-color: red; */
+    height: 100px;
+    margin-top: 20px;
+}
+
+
+.comments-rating{
+    /* background-color:red; */
+    height:100px;
+    width: calc(100% - 10%);
+}
+.user-comments{
+    background-color:#dbdad5;
+    height: 60px;
+    width: calc(100% - 10%);
+   /* margin: auto;*/
+    border-radius: 3px;
+    padding-left: 10px;
+
+}
+.comments p{
+    font-weight: bold;
+}
+.top-box{
+    /* background-color: pink; */
+    height:20px;
+}
+.comments{
+    /* background-color: purple; */
+    height: 30px;
+}
+.name-user {
+    display: flex;
+    flex-direction: column;
+  }
+  .name-user strong {
+    color: #3d3d3d;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    margin-bottom:  10px;
+  }
+  .name-user span {
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+
+
+  
+/* slider for rating */
+
+.slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 10px;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: forestgreen;
+    cursor: pointer;
+     border-radius: 50%;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+  .textarea{
+      max-width: 300px;
+      max-height: 150px;
+      min-height: 150px;
+      min-width: 300px;
+      border: 2px solid forestgreen;
+      border-radius: 5px;
+      margin-top: 15px;
+      background-color: white;
+  }
+    @media (max-width: 600px) {
+        .details{
+            width: calc(100% - 10%);
+            margin-left: 5px;
+            padding: 30px;
+        }
+        .flex-box{
+            
+            margin-left: 5px;
+             width:100%;
+        display:flex;
+        justify-content: space-around;
+        }
+
+.left{
+    flex: 1;
+    margin: 4px;
+      width:80px;
+}
+.right{
+    flex:1.2;
+     margin: 4px;
+       width:80px;
+}
+    }
+  
+  

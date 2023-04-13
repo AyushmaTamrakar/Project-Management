@@ -1,0 +1,101 @@
+.container{
+  height: auto;
+  width: 200vh;
+  background-color: cyan;
+ /* display: flex;*/
+}
+
+
+.form .profile{
+  height: 60vh;
+  border:  1px solid black;
+  width: 40vh;
+  background-color: yellow;
+  margin-left: 400px;
+  flex: 2;
+}
+
+.form .profile .avatar {
+  vertical-align: middle;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  /*position:  absolute;*/
+/*  margin-top: -400px;
+  margin-left: -490px; 
+  top: 50%;
+  left: 50%;*/
+  margin-left: 80px;
+   margin-top: 80px;
+}
+
+.form .profile h1{
+   text-align: center;
+   margin-top: 7vh;
+}
+.form .profile h3{
+   text-align: center;
+   margin-top: 1vh;
+}
+.form .insert{
+  height: 60vh;
+  border:  1px solid black;
+  width: 40vh;
+  background-color: pink;
+  margin-right: 400px;
+  flex: 4;
+}
+.form{
+  display: flex;
+}
+
+.shop1{
+  height: auto;
+  border:  1px solid black;
+  width: 123.7vh;
+  background-color: blue;
+  margin-left: 400px;
+}
+.shop2{
+   height: auto;
+  border:  1px solid black;
+  width: 123.7vh;
+  background-color: green;
+  margin-left: 400px;
+  
+}
+
+.shop1{
+
+  color: white;
+ 
+
+}
+
+
+.shop1 th{
+  color: white;
+}
+.shop1  td{
+  color: white;
+}
+
+table{
+  width: 100%;
+}
+
+.shop2 th{
+  color: white;
+}
+.shop2  td{
+  color: white;
+}
+
+.shop2 h2{
+  color: white;
+  text-align: center;
+}
+.shop1 h2{
+  color: white;
+  text-align: center;
+}

@@ -1,0 +1,370 @@
+
+
+
+
+
+
+
+
+CREATE TABLE Customer(
+    CustomerID number(20) PRIMARY KEY,
+    Name varchar2(255),
+    LastName varchar2(255),
+    Address varchar2(255),
+    Email varchar2(255),
+    Password varchar2(255),
+    Contact number(10),
+    Gender varchar2(255),
+    DOB varchar2(255),
+   PROFILEPIC varchar2(100)
+);
+
+
+
+
+
+Create sequence cusotmer_id_seq2
+START WITH 1
+MAXVALUE 999999999
+MINVALUE 1
+CYCLE
+NOCACHE
+NOORDER;
+
+
+Create OR REPLACE  trigger cusotmerId2
+Before insert on Customer
+For each row
+begin
+if inserting then
+if :new.CustomerID is null then
+Select cusotmer_id_seq2.nextval
+into :new.CustomerID
+from dual;
+end if;
+end if;
+end;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create table Product(
+    ProId number(20) Primary Key,
+    Name varchar2(20),
+    Image varchar2(25),
+    ProType varchar2(10),
+    Description varchar2(200),
+    Allergy_Info varchar2(200),
+    Price number(20),
+    Stock number(30),
+    SHOPID number(38),
+    Status varchar2(30),
+    FOREIGN KEY (SHOPID) REFERENCES SHOP(SHOPID)
+);
+Create sequence product_id_seq2
+START WITH 1
+MAXVALUE 999999999
+MINVALUE 1
+CYCLE
+NOCACHE
+NOORDER;
+
+Create OR REPLACE  trigger productId2
+Before insert on Product
+For each row
+begin
+if inserting then
+if :new.ProId is null then
+Select product_id_seq2.nextval
+into :new.ProId
+from dual;
+end if;
+end if;
+end;
+
+
+CREATE OR REPLACE TRIGGER status_product
+BEFORE INSERT OR UPDATE ON Product
+FOR EACH ROW
+BEGIN
+IF inserting then
+IF :new.STOCK > 0 THEN
+:new.status := 'Available';
+UPDATE Product  SET status = :new.status WHERE PROID = :NEW.PROID   ;
+DBMS_OUTPUT.PUT_LINE('insert successfully');
+DBMS_OUTPUT.PUT_LINE(:new.proid);
+DBMS_OUTPUT.PUT_LINE(:new.status);
+ELSE IF :new.STOCK <= 0  THEN
+:new.status := 'Unavailable';
+UPDATE Product  SET STATUS = :new.status WHERE PROID = :NEW.PROID ;
+DBMS_OUTPUT.PUT_LINE('insert unsuccessfully');
+DBMS_OUTPUT.PUT_LINE(:new.proid);
+DBMS_OUTPUT.PUT_LINE(:new.status);
+END IF;
+END IF;
+END IF;
+END;
+
+
+
+
+
+create or replace TRIGGER status_productup
+BEFORE UPDATE ON Product
+FOR EACH ROW
+BEGIN
+if :new.stock=0 then :new.STATUS :='Unavilable';
+else  :new.status:='Available';
+end if;
+END;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE TABLE Trader(
+    traderID number(38) Primary Key,
+    traderName varchar2(50),
+    PANNumber varchar2(10),
+    email varchar2(90),
+    confirmPassword varchar2(120),
+    address varchar2(255),
+    contact number(10),
+   PROFILEPIC varchar2(100),
+    status  varchar2(10) Default 'Deactive'
+);
+
+CREATE SEQUENCE   "TRADER_ID_SEQ2"  
+MINVALUE 1 
+MAXVALUE 999999999 
+INCREMENT BY 1 START WITH 130 
+NOCACHE  
+NOORDER  
+CYCLE
+
+
+
+Create OR REPLACE  trigger traderId2
+Before insert on Trader
+For each row
+begin
+if inserting then
+if :new.traderID is null then
+Select trader_id_seq2.nextval
+into :new.traderID
+from dual;
+end if;
+end if;
+end;
+
+
+
+
+
+
+
+
+
+
+
+
+Create table Shop(
+    ShopID number(20) Primary Key,
+    ShopRef number(5),
+    ShopName varchar2(100),
+    TRADERID number(38),
+    FOREIGN KEY (TRADERID) REFERENCES TRADER(TRADERID)
+);
+
+
+Create sequence shop_id_seq2
+START WITH 1
+MAXVALUE 999999999
+MINVALUE 1
+CYCLE
+NOCACHE
+NOORDER;
+
+
+
+Create OR REPLACE  trigger shopId2
+Before insert on SHOP
+For each row
+begin
+if inserting then
+if :new.SHOPID is null then
+Select shop_id_seq2.nextval
+into :new.SHOPID
+from dual;
+end if;
+end if;
+end;
+
+
+
+
+
+
+
+
+CREATE TABLE  "STARS" 
+   (	"ID" NUMBER(38,0) primary key, 
+	"RATEINDEX" NUMBER(5,0) NOT NULL ENABLE, 
+	"COMMENTS" VARCHAR2(200), 
+	"USERNAME" VARCHAR2(20), 
+	"PROID" NUMBER (20),
+    FOREIGN KEY (PROID) REFERENCES PRODUCT(PROID)
+   )
+
+
+Create sequence stars_id_seq2
+START WITH 1
+MAXVALUE 999999999
+MINVALUE 1
+CYCLE
+NOCACHE
+NOORDER;
+
+
+Create OR REPLACE  trigger stars
+Before insert on Stars
+For each row
+begin
+if inserting then
+if :new.ID is null then
+Select stars_id_seq2.nextval
+into :new.ID
+from dual;
+end if;
+end if;
+end;
+
+
+
+
+
+CREATE TABLE  "ORDERS" 
+   (	"ORDER_ID" NUMBER, 
+	"CUSTOMER_ID" NUMBER references CUSTOMER(CUSOTMERID), 
+	"ORDER_TOTAL" NUMBER(8,2), 
+	"USER_NAME" VARCHAR2(100), 
+	 PRIMARY KEY ("ORDER_ID") ENABLE
+   )
+
+
+
+CREATE SEQUENCE   "ORDER_ID_SEQ2"  
+MINVALUE 1
+ MAXVALUE 999999999
+ INCREMENT BY 1
+ START WITH 1000
+ NOCACHE  
+NOORDER 
+ CYCLE
+
+
+
+Create OR REPLACE  trigger orderId2
+Before insert on ORDERS
+For each row
+begin
+if inserting then
+if :new.ORDER_ID is null then
+Select order_id_seq2.nextval
+into :new.ORDER_ID
+from dual;
+end if;
+end if;
+end;
+
+
+
+
+
+ 
+CREATE TABLE 
+CREATE TABLE  "ORDER_ITEM" 
+   (	"ORDERITEMID" NUMBER(20,0) , 
+	"ORDERID" NUMBER REFERENCES ORDERS (ORDER_ID), 
+	"PRODUCTID" NUMBER(20,0) REFERENCES PRODUCT(PROID), 
+	"UNIT_PRICE" NUMBER, 
+	"QUANTITY" NUMBER, 
+	"TRADERID" NUMBER REFERENCES TRADER(TRADERID), 
+	 PRIMARY KEY ("ORDERITEMID") ENABLE
+   )
+
+
+ CREATE SEQUENCE   "ORDERITEM_ID_SEQ2" 
+ MINVALUE 1 
+MAXVALUE 999999999 
+INCREMENT BY 1 START WITH 47 
+NOCACHE  
+NOORDER 
+ CYCLE
+
+
+
+
+
+CREATE OR REPLACE TRIGGER  "ORDERITEMID3" 
+Before insert on order_item
+For each row
+begin
+if inserting then
+if :new.orderitemid is null then
+Select orderitem_id_seq2.nextval
+into :new.orderitemid
+from dual;
+end if;
+end if;
+end;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,456 @@
+
+/* Register form starts here */
+#box {
+    /* z-index: 1; */
+    min-height: 120vh;
+    /* background-color: #fff; */
+    width: calc(100% - 10px);
+    margin: 10px auto;
+    background-color: #ebebeb;
+  }
+  
+  .form-box {
+    background-color: #fff;
+    width: calc(100% - 400px);
+    min-height: 95vh;
+  
+    position: relative;
+    margin: auto;
+    top: 9vh;
+    border: .1px solid #000 .1;
+    display: flex;
+    border-radius: 30px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+  
+    /* box-shadow: 0 0 100px 9px #000; */
+  }
+  
+  .register {
+    /* background-color: aqua; */
+    width: 40vw;
+    height: 80vh;
+    border: none;
+    flex: 1.2;
+    flex-shrink : 0;
+ 
+  }
+  
+  .image {
+    /* background-color: palevioletred; */
+    height: 80vh;
+    width: 40vw;
+    flex: 1;
+    border: none;
+    z-index: 1;
+    flex-shrink: 2;
+  }
+  
+  .image img {
+    height: 80vh;
+    width: 100vw;
+    display: block;
+    position: relative;
+    /* top: 100px; */
+    margin: auto;
+  }
+  
+  .button-box {
+    height: 5vh;
+    width: calc(100% - 50%);
+    margin: auto;
+    display: flex;
+    top: 20px;
+    justify-content: center;
+    justify-items: center;
+    /* box-shadow: 0 0 20px 9px #864879; */
+    position: relative;
+    background-color: forestgreen;
+    border-radius: 30px;
+  }
+  .button-box:hover{
+    background-color: forestgreen;
+    border-radius: 20px;
+  }
+  
+  .toggle-btn {
+    all: unset;
+    height: 100%;
+    flex: 1;
+    text-align: center;
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+    color: #000;
+    color: #fff;
+    background: transparent;
+    position: relative;
+  }
+  
+  #btn {
+    position: absolute;
+    /* background: blue; */
+    height: 5vh;
+    width: calc(100% - 50%);
+  
+    left: 0;
+    background:#32CD32;
+    /* background: linear-gradient(to right, #df5ecb, #ed8d8d); */
+    border-radius: 30px;
+    transition: 0.5s;
+  }
+  
+  .customer,
+  .trader {
+
+    height: auto;
+    width: calc(100% - 417px);
+    /* background-color: #df5ecb; */
+    position: absolute;
+    top: 70px;
+    left: 3px;
+    margin: auto;
+    margin-bottom: 0;
+    padding: 0 1vw 0 0.2vw;
+    font-size: 1rem;
+  }
+  
+  .customer i{
+    position:  absolute;
+    margin-left: 22px;
+    margin-top: 7px;
+   /* padding: 2px;*/
+  }
+  #trader {
+    /* background-color: red; */
+    position: relative;
+    left: 100%;
+  
+  }
+  
+  #customer {
+    /* background-color: #052a43; */
+    position: relative;
+    
+    z-index: 99;
+  
+  }
+  
+  .input-field {
+    all: unset;
+    height: 3.3vh;
+    /* height:4vh; */
+    width: calc(100% - 60%);
+    /* background-color: ; */
+    /* margin-bottom: 25px; */
+    margin-left: 15px;
+    padding: 2px 12px;
+/*    padding-left: 50px;*/
+    border-radius: 4px;
+    border: 0.1px solid #000;
+  
+  
+  }
+/*  .input-field text{
+    width: 10px;
+  }*/
+  .full {
+    width: calc(100% - 10%);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1rem;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+  }
+  
+  .submit {
+    all: unset;
+    background-color: forestgreen;
+    padding: 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #fff;
+    border-radius: 30px;
+    /*left: 35%;*/
+    position: relative;
+    /* margin-bottom: 2px; */
+    /* top: 15px; */
+    /* margin-top: 3px; */
+    text-align: center;
+  }
+  .createacc{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .dob{
+    margin-right: 12px;
+  }
+  .dob,
+  .gender,
+  .shopType {
+    position: relative;
+    left: 20px;
+  }
+  
+  .gender1,
+  .shopType1 {
+    position: relative;
+    left: 25px;
+    width: calc(100% - 65%);
+    height: 3.9vh;
+    background: none;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border: 1px solid #000;
+    padding-left: 3px;
+    border-radius: 3px;
+  }
+  
+  .link {
+    left: 30%;
+    position: relative;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  footer .link a {
+    all: unset;
+    font-size: 1rem;
+    color: black;
+  }
+  
+  .policy1 {
+    position: relative;
+    left: 20px;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+   
+  }
+  
+  .error {
+    height: 3vh;
+  
+    color: red;
+    font-size: 1rem;
+    margin: 0 20px 5px 20px;
+  }
+  
+  .errorhalf {
+    height: 3vh;
+    width: 225px;
+    margin: 3px 0 3px 18px;
+  
+    top: -14px;
+    left: 50px;
+    color: red;
+  
+    font-size: 1rem;
+    float: left;
+  }
+  
+  /* register end */
+  @media only screen and (min-width: 1200px){
+
+    .form-box{
+      /* background-color: red; */
+      width: calc(100% - 20%);
+      height: 83vh;
+    }
+   .register{
+     /* background-color: red; */
+     width: 50vw;
+   }
+   .image{
+     width: 20vw;
+   }
+   .image img{
+     width: 30vw;
+   }
+   .customer, .trader{
+    width: calc(100% - 49%);
+    /* background-color: blue; */
+  }
+  .input-field{
+    width: calc(100% - 62%);
+   }
+   .full{
+    width:calc(100% - 11%);
+   }
+   .errorhalf{
+    /* background-color: pink; */
+
+    width: calc(100% - 59%);
+  }
+  }
+
+
+
+  @media (min-width: 1100px) {
+    .form-box{
+      width: calc(100% - 20%);
+      /* background-color: #df5ecb; */
+      height: 84vh;
+    }
+   
+    .image img{
+      width: 300px;
+    }
+    .register{
+      width: 18vw;
+      /* background-color: red; */
+    }
+    .customer, .trader{
+      width: calc(100% - 47%);
+      /* background-color: blue; */
+    }
+    .input-field{
+      width: calc(100% - 61%);
+     }
+     .full{
+      width:calc(100% - 11%);
+     }
+     .errorhalf{
+      /* background-color: pink; */
+ 
+      width: calc(100% - 59%);
+    }
+  }
+  @media only screen and (max-width: 1099px) {
+    .form-box{
+      width: calc(100% - 20%);
+      /* background-color: #df5ecb; */
+      height: 84vh;
+    }
+   
+    .image img{
+      width: 290px;
+    }
+    .register{
+      width: 18vw;
+      /* background-color: red; */
+    }
+    .customer, .trader{
+      width: calc(100% - 47%);
+      /* background-color: blue; */
+    }
+    .input-field{
+      width: calc(100% - 62%);
+     }
+     .full{
+      width:calc(100% - 11%);
+     }
+     .errorhalf{
+      /* background-color: pink; */
+ 
+      width: calc(100% - 59%);
+    }
+  }
+
+  @media only screen and (max-width: 950px) {
+    .form-box{
+      width: calc(100% - 15%);
+      height: 83vh;
+    }
+    .image{
+      display:none;
+    }
+   
+    .customer, .trader{
+      width: 100%;
+  
+      /* left: 20px; */
+    }
+    .errorhalf{
+      /* background-color: pink; */
+      width: calc(100% - 60%);
+    }
+    .input-field{
+      width: calc(100% - 59%);
+     }
+    
+    .errorhalf{
+      /* background-color: pink; */
+ 
+      width: calc(100% - 55%);
+    }
+    .full{
+       width:calc(100% - 13%);
+     }
+  }
+  
+  @media only screen and (max-width: 600px) {
+     .form-box{
+       width: calc(100% - 5%);
+       height: 90vh;
+    
+     }
+     .register{
+       margin-right: 5px;
+     }
+     .image{
+       display:none;
+     } 
+     .customer, .trader{
+       width: calc(100% - 50px);
+       width: 100%;
+     }
+     .input-field{
+      width: calc(100% - 61%);
+     }
+     .full{
+       width:calc(100% - 13%);
+     }
+    
+     .errorhalf{
+       /* background-color: pink; */
+       /* width: 180px; */
+       width: calc(100% - 55%);
+     }
+  }
+  @media only screen and (max-width: 414px) {
+    .form-box{
+      width: calc(100% - 5%);
+  
+    }
+    .register{
+      margin-right: 5px;
+    }
+    .image{
+      display:none;
+    } 
+    .customer, .trader{
+      /* width: calc(100% - 50px); */
+      width: 100%;
+    }
+    .input-field{
+     width: calc(100% - 64%);
+    }
+    .full{
+      width:calc(100% - 15%);
+    }
+   
+    .errorhalf{
+      /* background-color: pink; */
+      /* width: 180px; */
+      width: calc(100% - 57%);
+    }
+    .button-box{
+        width: calc(100% - 40%);
+        height: 3.8vh;
+    }
+    #btn{
+      height: 3.8vh;
+    }
+    .gender1{
+      width: calc(100% - 72%);
+ 
+    }
+ }

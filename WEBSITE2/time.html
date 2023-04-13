@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body onload="myFunction();">
+
+<INPUT TYPE="Radio" Name="payment" onclick="myFunction();" Value="CC">Regular day time delivery
+ <INPUT TYPE="Radio" Name="payment" onclick="func2();"  Value="DC">Require Midnight Delivery
+ <INPUT TYPE="Radio" Name="payment1" id="1" Value="PP" >Same day Delivery
+<input type="text" id="h1">
+<input type="text" id="h2">
+
+<script>
+function myFunction() {
+var d = new Date();
+var p=Math.floor((d.getTime()/ (1000*60*60)) % 24)
+var q=Math.floor((d.getTime()/ (1000*60)) % 60 )
+document.getElementById("h1").value=p;
+document.getElementById("h2").value=q;
+
+if((p>=1 && q>=30) && ( p<=8 && q<=30) ) 
+{
+document.getElementById("1").disabled=false;
+}
+else
+{   
+document.getElementById("1").disabled=true;
+}
+}
+
+function func2()
+{
+document.getElementById("1").checked = false;
+document.getElementById("1").disabled=true;
+
+}
+</script>
+
+</body>
+</html>

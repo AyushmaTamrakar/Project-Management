@@ -1,0 +1,18 @@
+Username: sb-beuoh15944462@personal.example.com
+password: 7y7iaqL)
+
+Username: navantika20@tbc.edu.np
+Password: Paypal123!#
+
+
+how to create app password:
+log into email
+manage your google account
+sequirity
+2 step : ON
+goback in sequirity check see for app password
+app apssword
+previous password
+select app: PM
+generate
+generated text-. copy -> done -> sendmail.ini -> auth_password -> paste the generated text.
